@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebki</title>
+    <!-- Fontawesome css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <!-- Flowbite css -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- Custom css -->
+    <link rel="stylesheet" href="./assest/css/style.css">
+</head>
+
+<body>
+    <section
+        class="bg-[url('../../assest/img/coming-bg.png')] bg-center bg-no-repeat bg-cover w-full h-screen flex items-center justify-center relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[#200e0cb3]">
+        <div class="container mx-auto relative ">
+            <div class="coming_details  text-center w-full max-w-[800px] mx-auto">
+                <h1 class="text-white font-bold text-4xl xsm:text-5xl pb-5 text-center">We're Coming Soon</h1>
+                <p class="text-2xl font-semibold text-white">Our website is under construction. We'll be here soon with our new awesome site,subscribe to be
+                    notified.</p>
+                <div class="countdown-wrap mt-8 mb-7 flex flex-wrap mx-auto">
+                    <div class="w-full xsm:w-1/2 md:w-1/4 p-3">
+                        <div class="timer_inner bg-red-500 p-4 rounded-lg h-full w-full flex items-center justify-center flex-col">
+                            <span class="block text-white text-5xl font-extrabold" id="days"></span>
+                            <span class="block text-white text-xl font-semibold">Days</span>
+                        </div>
+                    </div>
+                    <div class="w-full xsm:w-1/2 md:w-1/4 p-3">
+                        <div class="timer_inner bg-red-500 p-4 rounded-lg h-full w-full flex items-center justify-center flex-col">
+                            <span class="block text-white text-5xl font-extrabold" id="hours"></span>
+                            <span class="block text-white text-xl font-semibold">Hours</span>
+                        </div>
+                    </div>
+                    <div class="w-full xsm:w-1/2 md:w-1/4 p-3">
+                        <div class="timer_inner bg-red-500 p-4 rounded-lg h-full w-full flex items-center justify-center flex-col">
+                            <span class="block text-white text-5xl font-extrabold" id="minutes"></span>
+                            <span class="block text-white text-xl font-semibold">Minutes</span>
+                        </div>
+                    </div>
+                    <div class="w-full xsm:w-1/2 md:w-1/4 p-3">
+                        <div class="timer_inner bg-red-500 p-4 rounded-lg h-full w-full flex items-center justify-center flex-col">
+                            <span class="block text-white text-5xl font-extrabold" id="seconds"></span>
+                            <span class="block text-white text-xl font-semibold">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form action="#" class="subscribe-form py-5">
+                <div class="input-group relative w-full max-w-[550px] mx-auto">
+                    <input type="email" class="w-full h-14 px-6 text-lg focus:border-red-500 focus:ring-transparent font-medium rounded-full" placeholder="Enter Your Email" required>
+                    <button type="submit" class="absolute top-0 right-0 bg-red-500 h-full w-36 text-center rounded-r-full text-lg font-bold text-white">Subscribe</button>
+                </div>
+            </form>
+            <div class="w-full max-w-[200px] mx-auto  h-auto flex items-center justify-between mt-5">
+                <a href="javascrip:void(0)" class="text-red-500 hover:text-white bg-white hover:bg-red-500 max-w-[38px] max-h-[38px] min-h-[38px] w-full h-full rounded transition duration-700 ease-in-out flex items-center justify-center">
+                    <i class="fa-brands fa-facebook-f text-lg leading-normal font-bold"></i>
+                </a>
+                <a href="javascrip:void(0)" class="text-red-500 hover:text-white bg-white hover:bg-red-500 max-w-[38px] max-h-[38px] min-h-[38px] w-full h-full rounded transition duration-700 ease-in-out flex items-center justify-center">
+                    <i class="fa-brands fa-twitter text-lg leading-normal font-bold"></i>
+                </a>
+                <a href="javascrip:void(0)" class="text-red-500 hover:text-white bg-white hover:bg-red-500 max-w-[38px] max-h-[38px] min-h-[38px] w-full h-full rounded transition duration-700 ease-in-out flex items-center justify-center">
+                    <i class="fa-brands fa-instagram text-lg leading-normal font-bold"></i>
+                </a>
+                <a href="javascrip:void(0)" class="text-red-500 hover:text-white bg-white hover:bg-red-500 max-w-[38px] max-h-[38px] min-h-[38px] w-full h-full rounded transition duration-700 ease-in-out flex items-center justify-center">
+                    <i class="fa-brands fa-linkedin-in text-lg leading-normal font-bold"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- dark mode toggle -->
+    <button id="theme-toggle" type="button"
+        class="bg-slate-900 dark:bg-slate-100 dark:text-gray-600 text-gray-400  rounded-tl-xl rounded-bl-xl text-sm py-3 px-4 fixed top-[50%] right-0 z-40">
+        <i class="fa-solid fa-moon text-xl hidden" id="theme-toggle-dark-icon"></i>
+        <i class="fa-solid fa-sun text-xl hidden" id="theme-toggle-light-icon"></i>
+    </button>
+    <!-- Jquery js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Flowbite js -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <!-- Costum js -->
+    <script src="./assest/js/main.js"></script>
+</body>
+
+</html>

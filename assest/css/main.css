@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    * {
+        font-family: 'Rajdhani', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .bg_brown{
+        background-color: #200e0c;
+    }
+    /* Common Css Start */
+    .testimonial-slider .slick-list{
+        padding-bottom: 13px !important;
+    }
+    .testimonial-slider .slick-dots li.slick-active button:before {
+        opacity: .75;
+        color: red !important;
+    }
+
+    .testimonial-slider .slick-dots li button:before {
+        font-family: 'slick';
+        font-size: 15px !important;
+        position: absolute;
+        height: 20px;
+        content: '•';
+    }
+    .dark .testimonial-slider .slick-dots li button:before{
+        color: white ;
+    }
+    .dark .testimonial-slider .slick-dots li.slick-active button:before {
+        opacity: 1;
+        color: #fc5050!important;
+    }
+    input[type=email]:focus{
+        box-shadow: none !important;
+    }
+    /* .instructors_section .card::before{
+        @apply absolute w-full h-full;
+    } */
+}
+@layer components  {
+    .footer_link:hover .footer_span{
+        background-color: #ffffff;
+        color: #fe4444;
+    }
+    .footer_header::before{
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 35px;
+        height: 2px;
+        background: #fe4444;
+    }
+    .footer_header::after{
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 40px;
+        width: 10px;
+        height: 2px;
+        background: #fe4444;
+    }
+    .fmenu_items:hover a{
+        color: #fe4444 !important;
+    }
+    .gallery_tab li.active{
+        color: #fe4444;
+        border-color:#fe4444 ;
+    }
+}

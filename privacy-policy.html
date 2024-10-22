@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebki</title>
+    <!-- Fontawesome css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <!-- Flowbite css -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- Custom css -->
+    <link rel="stylesheet" href="./assest/css/style.css">
+</head>
+
+<body>
+    <!-- Header Start -->
+    <div class="top_header bg-gray-950 hidden md:block" id="header">
+        <div class="container mx-auto">
+            <div class="md:flex items-center flex-wrap mx-auto">
+                <div class="md:w-1/2 w-full flex justify-center md:justify-start">
+                    <a href="javscript:;"
+                        class="text-white hover:text-red-400 transition duration-500 ease-in-out text-sm font-semibold p-2 border-r">
+                        <i class="fa-sharp fa-solid fa-phone me-1"></i>
+                        +380 123 65X XXXX
+                    </a>
+                    <a href="javscript:;"
+                        class="text-white hover:text-red-400 transition duration-500 ease-in-out text-sm font-semibold p-2">
+                        <i class="fa-solid fa-envelope me-1"></i>
+                        info@example.com
+                    </a>
+                </div>
+                <div class="md:w-1/2 w-full flex justify-center md:justify-end items-center">
+                    <a href="javscript:;"
+                        class="text-white hover:text-red-400 transition duration-500 ease-in-out text-lg py-2 px-4 border-r">
+                        <i class="fa-brands fa-linkedin-in"></i> </a>
+                    <a href="javscript:;"
+                        class="text-white hover:text-red-400 transition duration-500 ease-in-out text-lg py-2 px-4 border-r">
+                        <i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="javscript:;"
+                        class="text-white hover:text-red-400 transition duration-500 ease-in-out text-lg py-2 px-4 border-r">
+                        <i class="fa-brands fa-twitter"></i></a>
+                    <a href="javscript:;"
+                        class="text-white hover:text-red-400 transition duration-500 ease-in-out text-lg py-2 px-4 "> <i
+                            class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="bg-white dark:bg-slate-950 sticky top-0 z-10 w-full h-full">
+        <div class="bottom_header">
+            <nav class="w-full shadow dark:shadow-slate-700">
+                <div class="container mx-auto">
+                    <div class="w-full flex items-center justify-between py-5">
+                       <a href="index.html">
+                            <img src="./assest/img/light_logo.png" alt="logo" class="max-w-36 hidden light_logo">
+<img src="./assest/img/dark_logo.png" alt="logo" class="max-w-36 hidden dark_logo">
+                        </a>
+                        <div class="menu_list hidden md:block">
+                            <ul class="flex gap-10 dark:text-gray-200">
+                                <li>
+                                    <a href="index.html"
+                                        class="py-3 inline-block font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Home</a>
+                                </li>
+                                <li>
+                                    <a href="gallery.html"
+                                        class="py-3 inline-block font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Gallery</a>
+                                </li>
+                                <li>
+                                    <a href="about.html"
+                                        class="py-3 inline-block font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">About</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" id="page_dropdown"
+                                        data-dropdown-toggle="dropdown_btn_page"
+                                        class="py-3 inline-block font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Pages
+                                        <i class="fa-solid fa-angle-down ms-1"></i></a>
+                                    <!-- Dropdown menu -->
+                                    <div id="dropdown_btn_page"
+                                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow dark:shadow-slate-700 w-full max-w-[150px] dark:bg-slate-950">
+                                        <ul class="text-sm text-gray-700 dark:text-gray-200 border-t-4 border-red-400 rounded"
+                                            aria-labelledby="dropdownDefaultButton">
+                                            <li class="border-b dark:border-slate-700">
+                                                <a href="404.html"
+                                                    class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">404</a>
+                                            </li>
+                                            <li class="border-b dark:border-slate-700">
+                                                <a href="faqs.html"
+                                                    class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">FAQs</a>
+                                            </li>
+                                            <li class="border-b dark:border-slate-700">
+                                                <a href="pricing_plans.html"
+                                                    class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Pricing
+                                                    Plans</a>
+                                            </li>
+                                            <li class="border-b dark:border-slate-700">
+                                                <a href="#" data-dropdown-toggle="doubleDropdown"
+                                                    data-dropdown-placement="right-start"
+                                                    class="flex items-center justify-between px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Authentication
+                                                    <i class="fa-solid fa-angle-right "></i></a>
+
+                                                <div id="doubleDropdown"
+                                                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md  w-full max-w-[150px] shadow dark:shadow-slate-700 dark:bg-slate-950">
+                                                    <ul class="border-t-4 border-red-400 rounded text-sm text-gray-700 dark:text-gray-200"
+                                                        aria-labelledby="doubleDropdownButton">
+                                                        <li class="border-b dark:border-slate-700">
+                                                            <a href="login.html"
+                                                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Login</a>
+                                                        </li>
+                                                        <li class="border-b dark:border-slate-700">
+                                                            <a href="register.html"
+                                                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Register</a>
+                                                        </li>
+                                                        <li class="border-b dark:border-slate-700">
+                                                            <a href="forgot-password.html"
+                                                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Forgot
+                                                                Password</a>
+                                                        </li>
+                                                        <li class="border-b dark:border-slate-700">
+                                                            <a href="new-password.html"
+                                                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">New
+                                                                Password</a>
+                                                        </li>
+                                                        <li class="border-b dark:border-slate-700">
+                                                            <a href="verify-email.html"
+                                                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">verify
+                                                                Email</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="verify-pin.html"
+                                                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">verify
+                                                                Pin</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="border-b dark:border-slate-700">
+                                                <a href="coming_soon.html"
+                                                    class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Coming
+                                                    Soon</a>
+                                            </li>
+                                            <li class="border-b dark:border-slate-700">
+                                                <a href="terms-service.html"
+                                                    class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Terms
+                                                    Service</a>
+                                            </li>
+                                            <li>
+                                                <a href="privacy-policy.html"
+                                                    class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Privacy
+                                                    Policy</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"
+                                        class="py-3 inline-block font-sans font-semibold text-lg hover:text-red-400 active:text-red-400 transition duration-500 ease-in-out"
+                                        data-dropdown-toggle="dropdown_btn_blog" id="blog_dropdown">Blog
+                                        <i class="fa-solid fa-angle-down ms-1"></i></a>
+                                    <!-- Dropdown menu -->
+                                    <div id="dropdown_btn_blog"
+                                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow dark:shadow-slate-700 w-full max-w-[150px] dark:bg-slate-950">
+                                        <ul class="text-sm text-gray-700 dark:text-gray-200 border-t-4 border-red-400 rounded"
+                                            aria-labelledby="dropdownDefaultButton">
+                                            <li class="border-b dark:border-slate-700">
+                                                <a href="blog_grid.html"
+                                                    class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Blog
+                                                    Grid</a>
+                                            </li>
+                                            <li>
+                                                <a href="blog_detail.html"
+                                                    class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Blog
+                                                    Detail</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex">
+                            <button
+                                class="py-2 px-5 rounded-full bg-red-400 text-white font-bold text-lg hover:bg-red-500"
+                                type="button">Try now</button>
+                            <button class="md:hidden ms-4 text-2xl dark:text-slate-50" type="button"
+                                data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation"><i
+                                    class="fa-solid fa-bars-staggered  align-bottom"></i></button>
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Header End -->
+    <!-- ========= MOBILE MENU OFFCANVAS START ========= -->
+    <div id="drawer-navigation"
+        class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-full max-w-[250px] dark:bg-gray-800"
+        tabindex="-1" aria-labelledby="drawer-navigation-label">
+        <a href="index.html">
+            <img src="./assest/img/light_logo.png" alt="logo" class="w-full max-w-[80px] hidden light_logo">
+            <img src="./assest/img/dark_logo.png" alt="logo" class="w-full max-w-[80px] hidden dark_logo">
+        </a>
+        <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
+            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white">
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+            </svg>
+        </button>
+        <div class="py-4 overflow-y-auto">
+            <ul class="font-medium">
+                <li class="border-b dark:border-slate-700">
+                    <a href="index.html"
+                        class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Home</a>
+                </li>
+                <li class="border-b dark:border-slate-700">
+                    <a href="gallery.html"
+                        class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Gallery</a>
+                <li class="border-b dark:border-slate-700">
+                    <a href="about.html"
+                        class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">About</a>
+                </li>
+                <li class="border-b dark:border-slate-700">
+                    <a href="#" aria-controls="dropdown-pages" data-collapse-toggle="dropdown-pages"
+                        class="flex items-center justify-between px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Pages
+                        <i class="fa-solid fa-angle-down ms-1"></i></a>
+                    <ul id="dropdown-pages" class="hidden">
+                        <li class="border-b dark:border-slate-700 pl-3">
+                            <a href="404.html"
+                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">404</a>
+                        </li>
+                        <li class="border-b dark:border-slate-700 pl-3">
+                            <a href="faqs.html"
+                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">FAQs</a>
+                        </li>
+                        <li class="border-b dark:border-slate-700 pl-3">
+                            <a href="pricing_plans.html"
+                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Pricing
+                                Plans</a>
+                        </li>
+                        <li class="border-b dark:border-slate-700 pl-3">
+                            <a href="#" aria-controls="dropdown-authentication"
+                                data-collapse-toggle="dropdown-authentication"
+                                class="flex items-center justify-between px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Authentication
+                                <i class="fa-solid fa-angle-down ms-1"></i></a>
+                            <ul id="dropdown-authentication" class="hidden">
+                                <li class="border-b dark:border-slate-700 pl-3">
+                                    <a href="login.html"
+                                        class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Login</a>
+                                </li>
+                                <li class="border-b dark:border-slate-700 pl-3">
+                                    <a href="register.html"
+                                        class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Register</a>
+                                </li>
+                                <li class="border-b dark:border-slate-700 pl-3">
+                                    <a href="forgot-password.html"
+                                        class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Forgot
+                                        Password</a>
+                                </li>
+                                <li class="border-b dark:border-slate-700 pl-3">
+                                    <a href="new-password.html"
+                                        class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">New
+                                        Password</a>
+                                </li>
+                                <li class="border-b dark:border-slate-700 pl-3">
+                                    <a href="verify-email.html"
+                                        class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Verify
+                                        Email</a>
+                                </li>
+                                <li class="pl-3">
+                                    <a href="verify-pin.html"
+                                        class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Verify
+                                        Pin</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="border-b dark:border-slate-700 pl-3">
+                            <a href="coming_soon.html"
+                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Coming
+                                Soon</a>
+                        </li>
+                        <li class="border-b dark:border-slate-700 pl-3">
+                            <a href="terms-service.html"
+                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Terms
+                                Service</a>
+                        </li>
+                        <li class="pl-3">
+                            <a href="privacy-policy.html"
+                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Privacy
+                                Policy</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" aria-controls="blog-pages" data-collapse-toggle="blog-pages"
+                        class="flex items-center justify-between px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200 border-b dark:border-slate-700">Blog<i
+                            class="fa-solid fa-angle-down ms-1"></i></a>
+                    <ul id="blog-pages" class="hidden">
+                        <li class="border-b dark:border-slate-700 pl-3">
+                            <a href="blog_grid.html"
+                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Blog
+                                Grid</a>
+                        </li>
+                        <li class="border-b dark:border-slate-700 pl-3">
+                            <a href="blog_detail.html"
+                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Blog
+                                Detail</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- ========= MOBILE MENU OFFCANVAS END ========= -->
+
+    <!-- Breadcrumb Section Start-->
+    <section
+        class="breadcrumb relative bg-[url('../../assest/img/gallery_bg_img.png')] bg-cover bg-no-repeat bg-center md:py-20 py-12 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black before:opacity-60">
+        <div class="container mx-auto text-center relative">
+            <h1 class="text-6xl text-white font-bold">Privacy Policy</h1>
+            <ul class="flex items-center justify-center text-white font-semibold text-2xl mt-5">
+                <li><a href="index.html">Home<i class="fa fa-angle-right text-lg mx-2"></i></a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End-->
+
+    <section class="dark:bg-slate-900  md:py-20 py-16">
+        <div class="container mx-auto">
+            <div class="shadow dark:shadow-slate-700 p-5 rounded-lg border dark:border-slate-800 mb-5">
+                <h1 class="text-2xl text-black font-bold mb-3 dark:text-white">Introduction
+                </h1>
+                <p class="font-medium text-lg text-gray-500 dark:text-gray-300 pb-4">
+                    We value the trust you place in us and recognize the importance of secure transactions and
+                    information privacy. This Privacy Policy describes how webki Internet Private Limited and its
+                    affiliates (collectively “webki, we, our, us”) collect, use, share or otherwise process your
+                    personal information through webki website <a href="javascript:void(0)"
+                        class="text-red-500">https://example.com/,</a> its mobile application, and m-site (hereinafter
+                    referred to as the “Platform”).
+                </p>
+                <p class="font-medium text-lg text-gray-500 dark:text-gray-300 ">
+                    While you may be able to browse certain sections of the Platform without registering with us,
+                    however, please note we do not offer any product or service under this Platform outside uk. Your
+                    personal information will primarily be stored and processed in uk and may have data protection laws
+                    that are different from those that apply in the country in which you are located. By visiting this
+                    Platform, providing your information or availing out product/service, you expressly agree to be
+                    bound by the terms and conditions of this Privacy Policy, the Terms of Use and the applicable
+                    service/product terms and conditions, and agree to be governed by the laws of uk including but not
+                    limited to the laws applicable to data protection and privacy. If you do not agree please do not use
+                    or access our Platform.</p>
+            </div>
+            <div class="shadow dark:shadow-slate-700 p-5 rounded-lg border dark:border-slate-800 mb-5">
+                <h1 class="text-2xl text-black font-bold mb-3 dark:text-white">Collection
+                </h1>
+                <p class="font-medium text-lg text-gray-500 dark:text-gray-300 pb-4">
+                    When you use our Platform, we collect and store your information which is provided by you from time
+                    to time. In general, you can browse the Platform without telling us who you are or revealing any
+                    personal information about yourself. Once you give us your personal information, you are not
+                    anonymous to us. Where possible, we indicate which fields are required and which fields are
+                    optional. You always have the option to not provide information by choosing not to use a particular
+                    service, product or feature on the Platform.</p>
+                <p class="font-medium text-lg text-gray-500 dark:text-gray-300 pb-4">
+                    We may track your buying behaviour, preferences, and other information that you choose to provide on
+                    our Platform. We use this information to do internal research on our users' demographics, interests,
+                    and behaviour to better understand, protect and serve our users. This information is compiled and
+                    analysed on an aggregated basis. This information may include the URL that you just came from
+                    (whether this URL is on our Platform or not), which URL you next go to (whether this URL is on our
+                    Platform or not), your computer browser information, and your IP address.</p>
+                <p class="font-medium text-lg text-gray-500 dark:text-gray-300 pb-4">
+                    We may collect personal information (such as email address, delivery address, name, phone number,
+                    credit card/debit card and other payment instrument details) from you when you set up an account or
+                    transact with us or participate in any event or contest. While you can browse some sections of our
+                    Platform without being a registered member, certain activities (such as placing an order or
+                    consuming our online content or services) do require registration. We use your contact information
+                    to send you offers based on your previous orders and your interests.p>
+                <p class="font-medium text-lg text-gray-500 dark:text-gray-300 pb-4">
+                    If you choose to post messages on our message boards, chat rooms or other message areas or leave
+                    feedback on the Platform or the social media handles maintained by us or if you use voice commands
+                    or virtual try and buy or similar feature to shop on the Platform, we will collect that information
+                    you provide to us. We retain this information as necessary to resolve disputes, provide customer
+                    support, troubleshoot problems or for internal research and analysis as permitted by law.</p>
+                <p class="font-medium text-lg text-gray-500 dark:text-gray-300 pb-4">
+                    If you send us personal correspondence, such as emails or letters, or if other users or third
+                    parties send us correspondence about your activities or postings on the Platform, we may collect
+                    such information into a file specific to you.</p>
+                <p class="font-medium text-lg text-gray-500 dark:text-gray-300 pb-4">
+                    If you enrol into our SuperCoins Loyalty Program or similar programs offered by webki, we will
+                    collect and store your personal information such as name, contact number, email address,
+                    communication address, date of birth, gender, zip code, lifestyle information, demographic and work
+                    details which is provided by you to webki or a third-party business partner that operates
+                    online/offline establishments or platforms where you can earn SuperCoins for purchase of goods and
+                    services, and redeem SuperCoins. We will also collect your information related to your transactions
+                    on webki platform and such third-party business partner platforms. When such third-party business
+                    partner collects your personal information directly from you, you will be governed by their privacy
+                    policies. webki shall not be responsible for the third-party business partner’s privacy practices or
+                    the content of their privacy policies, and we request you to read their privacy policies prior to
+                    disclosing any information.</p>
+                <p class="font-medium text-lg text-gray-500 dark:text-gray-300 ">
+                    webki has onboarded certain third-party business partners on the Platform who specialise in the
+                    categories like travel ticket reservations, booking online movie tickets, paying online bills and
+                    more (Ultra-Partners). If you use the services of Ultra-Partners, you will be redirected to
+                    Ultra-Partners websites/applications and your entry to Ultra-Partners websites/applications will be
+                    based on your webki login credentials after seeking your permissions to share the data further.
+                    webki shall not be responsible for the Ultra-Partner’s privacy practices or the content of their
+                    privacy policies, and we request you to read their privacy policies prior to disclosing any
+                    information.p>
+            </div>
+            <div class="shadow dark:shadow-slate-700 p-5 rounded-lg border dark:border-slate-800 mb-5">
+                <h1 class="text-2xl text-black font-bold mb-3 dark:text-white">Usage Of Information
+                </h1>
+                <p class="font-medium text-lg text-gray-500 dark:text-gray-300 pb-4">
+                    We use your personal information to provide the product and services you request. To the extent we
+                    use your personal information to market to you, we will provide you the ability to opt-out of such
+                    uses. We use your personal information to assist sellers and business partners in handling and
+                    fulfilling orders; enhancing customer experience; resolve disputes; troubleshoot problems; help
+                    promote a safe service; collect money; measure consumer interest in our products and services;
+                    inform you about online and offline offers, products, services, and updates; customize and enhance
+                    your experience; detect and protect us against error, fraud and other criminal activity; enforce our
+                    terms and conditions; and as otherwise described to you at the time of collection of information.
+                </p>
+                <p class="font-medium text-lg text-gray-500 dark:text-gray-300 pb-4">
+                    With your consent, we may have access to your SMS, instant messages, contacts in your directory,
+                    location, camera, photo gallery and device information. We may also request you to provide your PAN,
+                    GST Number, Government issued ID cards/number and Know-Your-Customer (KYC) details to: (i) check
+                    your eligibility for certain products and services including but not limited to credit and payment
+                    products; (ii) issue GST invoice for the products and services purchased for your business
+                    requirements; (iii) enhance your experience on the Platform and provide you access to the products
+                    and services being offered by us, sellers, affiliates or lending partners. You understand that your
+                    access to these products/services may be affected in the event consent is not provided to us.</p>
+                <p class="font-medium text-lg text-gray-500 dark:text-gray-300 pb-4">
+                    With your consent, we may have access to your SMS, instant messages, contacts in your directory,
+                    location, camera, photo gallery and device information. We may also request you to provide your PAN,
+                    GST Number, Government issued ID cards/number and Know-Your-Customer (KYC) details to: (i) check
+                    your eligibility for certain products and services including but not limited to credit and payment
+                    products; (ii) issue GST invoice for the products and services purchased for your business
+                    requirements; (iii) enhance your experience on the Platform and provide you access to the products
+                    and services being offered by us, sellers, affiliates or lending partners. You understand that your
+                    access to these products/services may be affected in the event consent is not provided to us.</p>
+                <p class="font-medium text-lg text-gray-500 dark:text-gray-300 pb-4">
+                    In our efforts to continually improve our product and service offerings, we and our affiliates
+                    collect and analyse demographic and profile data about our users' activity on our Platform. We
+                    identify and use your IP address to help diagnose problems with our server, and to administer our
+                    Platform. Your IP address is also used to help identify you and to gather broad demographic
+                    information.</p>
+                <p class="font-medium text-lg text-gray-500 dark:text-gray-300">
+                    We will occasionally ask you to participate in optional surveys conducted either by us or through a
+                    third-party market research agency. These surveys may ask you for personal information, contact
+                    information, date of birth, demographic information (like zip code, age, or income level),
+                    attributes such as your interests, household or lifestyle information, your purchasing behaviour or
+                    history, preferences, and other such information that you may choose to provide. The surveys may
+                    involve collection of voice data or video recordings, the participation of which would purely be
+                    voluntary in nature. We use this data to tailor your experience at our Platform, providing you with
+                    content that we think you might be interested in and to display content according to your
+                    preferences</p>
+            </div>
+            <div class="shadow dark:shadow-slate-700 p-5 rounded-lg border dark:border-slate-800 mb-5">
+                <h1 class="text-2xl text-black font-bold mb-3 dark:text-white">Cookies </h1>
+                <p class="font-medium text-lg text-gray-500 dark:text-gray-300">
+                    We use data collection devices such as "cookies" on certain pages of the Platform to help analyse
+                    our web page flow, measure promotional effectiveness, and promote trust and safety. "Cookies" are
+                    small files placed on your hard drive that assist us in providing our services. Cookies do not
+                    contain any of your personal information. We offer certain features that are only available through
+                    the use of a "cookie". We also use cookies to allow you to enter your password less frequently
+                    during a session. Cookies can also help us provide information that is targeted to your interests.
+                    Most cookies are "session cookies," meaning that they are automatically deleted from your hard drive
+                    at the end of a session. You are always free to decline/delete our cookies if your browser permits,
+                    although in that case you may not be able to use certain features on the Platform and you may be
+                    required to re-enter your password more frequently during a session.
+                </p>
+            </div>
+            <div class="shadow dark:shadow-slate-700 p-5 rounded-lg border dark:border-slate-800 mb-5">
+                <h1 class="text-2xl text-black font-bold mb-3 dark:text-white">Sharing Of Personal Information </h1>
+                <p class="font-medium text-lg text-gray-500 dark:text-gray-300 pb-4">
+                    We may share personal information internally within webki group companies, affiliates, related
+                    companies and with other third parties for purposes of providing products and services offered by
+                    them, such as, the deferred payment options webki PayLater offered by webki Advanz Private Limited
+                    through its lending partners. These entities and affiliates may share such information with their
+                    affiliates, business partners and other third parties for the purpose of providing you their
+                    products and services and may market to you as a result of such sharing unless you explicitly
+                    opt-out.
+                </p>
+                <p class="font-medium text-lg text-gray-500 dark:text-gray-300 pb-4">
+                    We may disclose your personal information to third parties, such as sellers, business partners. This
+                    disclosure may be required for us to provide you access to our products and services; for fulfilment
+                    of your orders; for enhancing your experience; for providing feedback on products; to collect
+                    payments from you; to comply with our legal obligations; to conduct market research or surveys; to
+                    enforce our Terms of Use; to facilitate our marketing and advertising activities; to analyse data;
+                    for customer service assistance; to prevent, detect, mitigate, and investigate fraudulent or illegal
+                    activities related to our product and services. We do not disclose your personal information to
+                    third parties for their marketing and advertising purposes without your explicit consent.
+                </p>
+                <p class="font-medium text-lg text-gray-500 dark:text-gray-300 pb-4">
+                    We may disclose personal information if required to do so by law or in the good faith belief that
+                    such disclosure is reasonably necessary to respond to subpoenas, court orders, or other legal
+                    process. We may disclose personal information to law enforcement agencies, third party rights
+                    owners, or others in the good faith belief that such disclosure is reasonably necessary to: enforce
+                    our Terms of Use or Privacy Policy; respond to claims that an advertisement, posting or other
+                    content violates the rights of a third party; or protect the rights, property or personal safety of
+                    our users or the general public.
+                </p>
+                <p class="font-medium text-lg text-gray-500 dark:text-gray-300">
+                    We and our affiliates will share / sell some or all of your personal information with another
+                    business entity should we (or our assets) plan to merge with, or be acquired by that business
+                    entity, or re-organization, amalgamation, restructuring of business. Should such a transaction occur
+                    that other business entity (or the new combined entity) will be required to follow this Privacy
+                    Policy with respect to your personal information.
+                </p>
+            </div>
+            <div class="shadow dark:shadow-slate-700 p-5 rounded-lg border dark:border-slate-800 mb-5">
+                <h1 class="text-2xl text-black font-bold mb-3 dark:text-white">Data Retention </h1>
+                <p class="font-medium text-lg text-gray-500 dark:text-gray-300">
+                    We retain your personal information in accordance with appliable laws, for a period no longer than
+                    is required for the purpose for which it was collected or as required under any applicable law.
+                    However, we may retain data related to you if we believe it may be necessary to prevent fraud or
+                    future abuse, to enable webki to exercise its legal rights and/or defend against legal claims or if
+                    required by law or for other legitimate purposes. We may continue to retain your data in anonymised
+                    form for analytical and research purposes.
+                </p>
+            </div>
+            <div class="shadow dark:shadow-slate-700 p-5 rounded-lg border dark:border-slate-800 mb-5">
+                <h1 class="text-2xl text-black font-bold mb-3 dark:text-white">Your Rights </h1>
+                <p class="font-medium text-lg text-gray-500 dark:text-gray-300 pb-4">
+                    We take every reasonable step to ensure that your personal information that we process is accurate
+                    and, where necessary, kept up to date, and any of your personal information that we process that you
+                    inform us is inaccurate (having regard to the purposes for which they are processed) is erased or
+                    rectified. You may access, correct, and update your personal information directly through the
+                    functionalities provided on the Platform. You may delete certain non-mandatory information by
+                    logging into our website and visiting Profile and Settings sections. You can also write to us at the
+                    contact information provided below to assist you with these requests.
+                </p>
+                <p class="font-medium text-lg text-gray-500 dark:text-gray-300">
+                    You have an option to withdraw your consent that you have already provided by writing to us at the
+                    contact information provided below. Please mention “for withdrawal of consent” in the subject line
+                    of your communication. We will verify such requests before acting upon your request. Please note,
+                    however, that withdrawal of consent will not be retroactive and will be in accordance with the terms
+                    of this Privacy Policy, related Terms of Use and applicable laws. In the event you withdraw consent
+                    given to us under this Privacy Policy, such withdrawal may hamper your access to the Platform or
+                    restrict provision of our services to you for which we consider that information to be necessary.
+                </p>
+            </div>
+            <div class="shadow dark:shadow-slate-700 p-5 rounded-lg border dark:border-slate-800">
+                <h1 class="text-2xl text-black font-bold mb-3 dark:text-white">Your Consent </h1>
+                <p class="font-medium text-lg text-gray-500 dark:text-gray-300 pb-4">
+                    By visiting our Platform or by providing your information, you consent to the collection, use,
+                    storage, disclosure and otherwise processing of your information (including sensitive personal
+                    information) on the Platform in accordance with this Privacy Policy. If you disclose to us any
+                    personal information relating to other people, you represent that you have the authority to do so
+                    and to permit us to use the information in accordance with this Privacy Policy.
+                </p>
+                <p class="font-medium text-lg text-gray-500 dark:text-gray-300">
+                    You, while providing your personal information over the Platform or any partner platforms or
+                    establishments, consent to us (including our other corporate entities, affiliates, lending partners,
+                    technology partners, marketing channels, business partners and other third parties) to contact you
+                    through SMS, instant messaging apps, call and/or e-mail for the purposes specified in this Privacy
+                    Policy.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- Footer Start -->
+    <footer class="bg_brown md:py-20 py-16 border-b border-white">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap">
+                <div class="sm:w-1/2 lg:w-1/3 w-full p-3">
+                    <a href="index.html">
+                        <img src="./assest/img/dark_logo.png" alt="logo" class=" max-w-[150px] w-full">
+                    </a>
+                    <p class="text-xl text-white font-semibold mt-10 mb-4 sm:max-w-[335px] w-full">Get unlimited access
+                        to 17,000+ of webki’s top courses for your team. Learn and improve skills across business, tech,
+                        design, and more.</p>
+                    <a href="javascript:void(0)" class="w-full h-auto flex items-center py-2 footer_link">
+                        <span
+                            class="footer_span bg-red-500 text-white max-w-[35px] max-h-[35px] min-h-[35px] w-full h-full rounded-lg transition duration-700 ease-in-out flex items-center justify-center">
+                            <i class="fa-solid fa-location-dot text-sm font-bold"></i>
+                        </span>
+                        <span class="text-white font-semibold text-xl ms-4">29/C Mizza Road, Ukraine</span>
+                    </a>
+                    <a href="javascript:void(0)" class="w-full h-auto flex items-center py-2 footer_link">
+                        <span
+                            class="footer_span bg-red-500 text-white max-w-[35px] max-h-[35px] min-h-[35px] w-full h-full rounded-lg transition duration-700 ease-in-out flex items-center justify-center">
+                            <i class="fa-solid fa-phone text-sm font-bold"></i>
+                        </span>
+                        <span class="text-white font-semibold text-xl ms-4">+380 123 65X XXXX</span>
+                    </a>
+                    <a href="javascript:void(0)" class="w-full h-auto flex items-center py-2 footer_link">
+                        <span
+                            class="footer_span bg-red-500 text-white max-w-[35px] max-h-[35px] min-h-[35px] w-full h-full rounded-lg transition duration-700 ease-in-out flex items-center justify-center">
+                            <i class="fa-solid fa-envelope text-sm font-bold"></i>
+                        </span>
+                        <span class="text-white font-semibold text-xl ms-4">info@example.com</span>
+                    </a>
+                </div>
+                <div class="sm:w-1/2 lg:w-1/6 w-full p-3">
+                    <h4 class="footer_header relative text-white font-semibold text-2xl font-Rajdhani mb-10">
+                        Quick Links
+                    </h4>
+                    <ul class="fmenu_list">
+                        <li
+                            class="fmenu_items pb-3 hover:transform hover:translate-x-3 transition duration-500 ease-in-out">
+                            <a href="javascript:void(0)" class="text-white font-bold text-lg"><i
+                                    class="fa-solid fa-angle-right text-red-500 text-lg me-2"></i> About Us</a>
+                        </li>
+                        <li
+                            class="fmenu_items pb-3 hover:transform hover:translate-x-3 transition duration-500 ease-in-out">
+                            <a href="javascript:void(0)" class="text-white font-bold text-lg"><i
+                                    class="fa-solid fa-angle-right text-red-500 text-lg me-2"></i> Our Team</a>
+                        </li>
+                        <li
+                            class="fmenu_items pb-3 hover:transform hover:translate-x-3 transition duration-500 ease-in-out">
+                            <a href="javascript:void(0)" class="text-white font-bold text-lg"><i
+                                    class="fa-solid fa-angle-right text-red-500 text-lg me-2"></i> Terms Of Service</a>
+                        </li>
+                        <li
+                            class="fmenu_items pb-3 hover:transform hover:translate-x-3 transition duration-500 ease-in-out">
+                            <a href="javascript:void(0)" class="text-white font-bold text-lg"><i
+                                    class="fa-solid fa-angle-right text-red-500 text-lg me-2"></i> Privacy policy</a>
+                        </li>
+                        <li
+                            class="fmenu_items pb-3 hover:transform hover:translate-x-3 transition duration-500 ease-in-out">
+                            <a href="javascript:void(0)" class="text-white font-bold text-lg"><i
+                                    class="fa-solid fa-angle-right text-red-500 text-lg me-2"></i> Our Services</a>
+                        </li>
+                        <li
+                            class="fmenu_items  hover:transform hover:translate-x-3 transition duration-500 ease-in-out">
+                            <a href="javascript:void(0)" class="text-white font-bold text-lg"><i
+                                    class="fa-solid fa-angle-right text-red-500 text-lg me-2"></i> Latest Blog</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sm:w-1/2 lg:w-1/6 w-full p-3">
+                    <h4 class="footer_header relative text-white font-semibold text-2xl font-Rajdhani mb-10">
+                        Support
+                    </h4>
+                    <ul class="fmenu_list">
+                        <li
+                            class="fmenu_items pb-3 hover:transform hover:translate-x-3 transition duration-500 ease-in-out">
+                            <a href="javascript:void(0)" class="text-white font-bold text-lg"><i
+                                    class="fa-solid fa-angle-right text-red-500 text-lg me-2"></i>Online Support</a>
+                        </li>
+                        <li
+                            class="fmenu_items pb-3 hover:transform hover:translate-x-3 transition duration-500 ease-in-out">
+                            <a href="javascript:void(0)" class="text-white font-bold text-lg"><i
+                                    class="fa-solid fa-angle-right text-red-500 text-lg me-2"></i> FAQs</a>
+                        </li>
+                        <li
+                            class="fmenu_items pb-3 hover:transform hover:translate-x-3 transition duration-500 ease-in-out">
+                            <a href="javascript:void(0)" class="text-white font-bold text-lg"><i
+                                    class="fa-solid fa-angle-right text-red-500 text-lg me-2"></i>
+                                Feedback</a>
+                        </li>
+                        <li
+                            class="fmenu_items pb-3 hover:transform hover:translate-x-3 transition duration-500 ease-in-out">
+                            <a href="javascript:void(0)" class="text-white font-bold text-lg"><i
+                                    class="fa-solid fa-angle-right text-red-500 text-lg me-2"></i>24/7 Service</a>
+                        </li>
+                        <li
+                            class="fmenu_items pb-3 hover:transform hover:translate-x-3 transition duration-500 ease-in-out">
+                            <a href="javascript:void(0)" class="text-white font-bold text-lg"><i
+                                    class="fa-solid fa-angle-right text-red-500 text-lg me-2"></i> Make Call</a>
+                        </li>
+                        <li
+                            class="fmenu_items  hover:transform hover:translate-x-3 transition duration-500 ease-in-out">
+                            <a href="javascript:void(0)" class="text-white font-bold text-lg"><i
+                                    class="fa-solid fa-angle-right text-red-500 text-lg me-2"></i> Latest Blog</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sm:w-1/2 lg:w-1/3 w-full p-3">
+                    <h4 class="footer_header relative text-white font-semibold text-2xl font-Rajdhani mb-10">
+                        Newsletter
+                    </h4>
+                    <p class="text-xl text-white font-semibold mt-10 mb-4">Subscribe Our Newsletter To Get First Latest
+                        Update And News</p>
+                    <form action="#" class="relative mb-4">
+                        <input type="email"
+                            class="w-full py-3 px-6 text-lg rounded-full outline-none bg-transparent border border-red-500 focus:shadow-none focus:border-red-500 leading-normal text-white"
+                            placeholder="Your email address" required>
+                        <button type="submit"
+                            class="absolute top-0 right-0 h-full rounded-e-full px-6 bg-red-500 text-white text-lg font-bold">
+                            <i class="fa fa-paper-plane"></i> Subscribe</button>
+                    </form>
+                    <p class="text-white font-bold text-lg">Follow Us :</p>
+                    <div class="w-full max-w-[200px] h-auto flex items-center justify-between py-5">
+                        <span
+                            class="bg-red-500 text-white hover:bg-white hover:text-red-500 max-w-[38px] max-h-[38px] min-h-[38px] w-full h-full rounded-full transition duration-700 ease-in-out flex items-center justify-center">
+                            <i class="fa-brands fa-facebook-f text-sm font-bold"></i>
+                        </span>
+                        <span
+                            class="bg-red-500 text-white hover:bg-white hover:text-red-500 max-w-[38px] max-h-[38px] min-h-[38px] w-full h-full rounded-full transition duration-700 ease-in-out flex items-center justify-center">
+                            <i class="fa-brands fa-instagram text-sm font-bold"></i>
+                        </span>
+                        <span
+                            class="bg-red-500 text-white hover:bg-white hover:text-red-500 max-w-[38px] max-h-[38px] min-h-[38px] w-full h-full rounded-full transition duration-700 ease-in-out flex items-center justify-center">
+                            <i class="fa-brands fa-twitter text-sm font-bold"></i>
+                        </span>
+                        <span
+                            class="bg-red-500 text-white hover:bg-white hover:text-red-500 max-w-[38px] max-h-[38px] min-h-[38px] w-full h-full rounded-full transition duration-700 ease-in-out flex items-center justify-center">
+                            <i class="fa-brands fa-youtube text-sm font-bold"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="subfooter bg_brown">
+        <div class="container mx-auto">
+            <div class="md:flex items-center flex-wrap mx-auto py-2">
+                <div class="lg:w-1/2 w-full flex justify-center lg:justify-start">
+                    <p class="text-white font-bold text-lg">© Copyright <a href="javascript:void(0)"
+                            class="text-red-500">webki</a> All Rights Reserved.</p>
+                </div>
+                <div class="lg:w-1/2 w-full flex justify-center lg:justify-end items-center">
+                    <a href="javscript:void(0);" class="text-white font-semibold hover:text-red-500 text-lg py-2 px-4">
+                        Support </a>
+                    <a href="javscript:void(0);"
+                        class="text-white font-semibold hover:text-red-500 text-lg py-2 px-4">Terms Of Services </a>
+                    <a href="javscript:void(0);"
+                        class="text-white font-semibold hover:text-red-500 text-lg py-2 px-4">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <!-- dark mode toggle -->
+    <button id="theme-toggle" type="button"
+        class="bg-slate-900 dark:bg-slate-100 dark:text-gray-600 text-gray-400  rounded-tl-xl rounded-bl-xl text-sm py-3 px-4 fixed top-[50%] right-0 z-40">
+        <i class="fa-solid fa-moon text-xl hidden" id="theme-toggle-dark-icon"></i>
+        <i class="fa-solid fa-sun text-xl hidden" id="theme-toggle-light-icon"></i>
+    </button>
+    <!-- Jquery js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Flowbite js -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <!-- Costum js -->
+    <script src="./assest/js/main.js"></script>
+</body>
+
+</html>

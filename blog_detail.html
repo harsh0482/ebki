@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebki</title>
+    <!-- Fontawesome css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <!-- Flowbite css -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- Fancybox css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <!-- Custom css -->
+    <link rel="stylesheet" href="./assest/css/style.css">
+</head>
+
+<body>
+    <!-- Header Start -->
+    <div class="top_header bg-gray-950 hidden md:block" id="header">
+        <div class="container mx-auto">
+            <div class="md:flex items-center flex-wrap mx-auto">
+                <div class="md:w-1/2 w-full flex justify-center md:justify-start">
+                    <a href="javscript:;"
+                        class="text-white hover:text-red-400 transition duration-500 ease-in-out text-sm font-semibold p-2 border-r">
+                        <i class="fa-sharp fa-solid fa-phone me-1"></i>
+                        +380 123 65X XXXX
+                    </a>
+                    <a href="javscript:;"
+                        class="text-white hover:text-red-400 transition duration-500 ease-in-out text-sm font-semibold p-2">
+                        <i class="fa-solid fa-envelope me-1"></i>
+                        info@example.com
+                    </a>
+                </div>
+                <div class="md:w-1/2 w-full flex justify-center md:justify-end items-center">
+                    <a href="javscript:;"
+                        class="text-white hover:text-red-400 transition duration-500 ease-in-out text-lg py-2 px-4 border-r">
+                        <i class="fa-brands fa-linkedin-in"></i> </a>
+                    <a href="javscript:;"
+                        class="text-white hover:text-red-400 transition duration-500 ease-in-out text-lg py-2 px-4 border-r">
+                        <i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="javscript:;"
+                        class="text-white hover:text-red-400 transition duration-500 ease-in-out text-lg py-2 px-4 border-r">
+                        <i class="fa-brands fa-twitter"></i></a>
+                    <a href="javscript:;"
+                        class="text-white hover:text-red-400 transition duration-500 ease-in-out text-lg py-2 px-4 "> <i
+                            class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="bg-white dark:bg-slate-950 sticky top-0 z-10 w-full h-full">
+        <div class="bottom_header">
+            <nav class="w-full shadow dark:shadow-slate-700">
+                <div class="container mx-auto">
+                    <div class="w-full flex items-center justify-between py-5">
+                        <a href="index.html">
+                            <img src="./assest/img/light_logo.png" alt="logo" class="max-w-36 hidden light_logo">
+                            <img src="./assest/img/dark_logo.png" alt="logo" class="max-w-36 hidden dark_logo">
+                        </a>
+                        <div class="menu_list hidden md:block">
+                            <ul class="flex gap-10 dark:text-gray-200">
+                                <li>
+                                    <a href="index.html"
+                                        class="py-3 inline-block font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Home</a>
+                                </li>
+                                <li>
+                                    <a href="gallery.html"
+                                        class="py-3 inline-block font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Gallery</a>
+                                </li>
+                                <li>
+                                    <a href="about.html"
+                                        class="py-3 inline-block font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">About</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" id="page_dropdown"
+                                        data-dropdown-toggle="dropdown_btn_page"
+                                        class="py-3 inline-block font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Pages
+                                        <i class="fa-solid fa-angle-down ms-1"></i></a>
+                                    <!-- Dropdown menu -->
+                                    <div id="dropdown_btn_page"
+                                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow dark:shadow-slate-700 w-full max-w-[150px] dark:bg-slate-950">
+                                        <ul class="text-sm text-gray-700 dark:text-gray-200 border-t-4 border-red-400 rounded"
+                                            aria-labelledby="dropdownDefaultButton">
+                                            <li class="border-b dark:border-slate-700">
+                                                <a href="404.html"
+                                                    class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">404</a>
+                                            </li>
+                                            <li class="border-b dark:border-slate-700">
+                                                <a href="faqs.html"
+                                                    class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">FAQs</a>
+                                            </li>
+                                            <li class="border-b dark:border-slate-700">
+                                                <a href="pricing_plans.html"
+                                                    class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Pricing
+                                                    Plans</a>
+                                            </li>
+                                            <li class="border-b dark:border-slate-700">
+                                                <a href="#" data-dropdown-toggle="doubleDropdown"
+                                                    data-dropdown-placement="right-start"
+                                                    class="flex items-center justify-between px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Authentication
+                                                    <i class="fa-solid fa-angle-right "></i></a>
+
+                                                <div id="doubleDropdown"
+                                                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md  w-full max-w-[150px] shadow dark:shadow-slate-700 dark:bg-slate-950">
+                                                    <ul class="border-t-4 border-red-400 rounded text-sm text-gray-700 dark:text-gray-200"
+                                                        aria-labelledby="doubleDropdownButton">
+                                                        <li class="border-b dark:border-slate-700">
+                                                            <a href="login.html"
+                                                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Login</a>
+                                                        </li>
+                                                        <li class="border-b dark:border-slate-700">
+                                                            <a href="register.html"
+                                                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Register</a>
+                                                        </li>
+                                                        <li class="border-b dark:border-slate-700">
+                                                            <a href="forgot-password.html"
+                                                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Forgot
+                                                                Password</a>
+                                                        </li>
+                                                        <li class="border-b dark:border-slate-700">
+                                                            <a href="new-password.html"
+                                                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">New
+                                                                Password</a>
+                                                        </li>
+                                                        <li class="border-b dark:border-slate-700">
+                                                            <a href="verify-email.html"
+                                                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">verify
+                                                                Email</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="verify-pin.html"
+                                                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">verify
+                                                                Pin</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="border-b dark:border-slate-700">
+                                                <a href="coming_soon.html"
+                                                    class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Coming
+                                                    Soon</a>
+                                            </li>
+                                            <li class="border-b dark:border-slate-700">
+                                                <a href="terms-service.html"
+                                                    class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Terms
+                                                    Service</a>
+                                            </li>
+                                            <li>
+                                                <a href="privacy-policy.html"
+                                                    class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Privacy
+                                                    Policy</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"
+                                        class="py-3 inline-block font-sans font-semibold text-lg hover:text-red-400 active:text-red-400 transition duration-500 ease-in-out"
+                                        data-dropdown-toggle="dropdown_btn_blog" id="blog_dropdown">Blog
+                                        <i class="fa-solid fa-angle-down ms-1"></i></a>
+                                    <!-- Dropdown menu -->
+                                    <div id="dropdown_btn_blog"
+                                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow dark:shadow-slate-700 w-full max-w-[150px] dark:bg-slate-950">
+                                        <ul class="text-sm text-gray-700 dark:text-gray-200 border-t-4 border-red-400 rounded"
+                                            aria-labelledby="dropdownDefaultButton">
+                                            <li class="border-b dark:border-slate-700">
+                                                <a href="blog_grid.html"
+                                                    class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Blog
+                                                    Grid</a>
+                                            </li>
+                                            <li>
+                                                <a href="blog_detail.html"
+                                                    class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out">Blog
+                                                    Detail</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex">
+                            <button
+                                class="py-2 px-5 rounded-full bg-red-400 text-white font-bold text-lg hover:bg-red-500"
+                                type="button">Try now</button>
+                            <button class="md:hidden ms-4 text-2xl dark:text-slate-50" type="button"
+                                data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation"><i
+                                    class="fa-solid fa-bars-staggered  align-bottom"></i></button>
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Header End -->
+    <!-- ========= MOBILE MENU OFFCANVAS START ========= -->
+    <div id="drawer-navigation"
+        class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-full max-w-[250px] dark:bg-gray-800"
+        tabindex="-1" aria-labelledby="drawer-navigation-label">
+        <a href="index.html">
+            <img src="./assest/img/light_logo.png" alt="logo" class="w-full max-w-[80px] hidden light_logo">
+            <img src="./assest/img/dark_logo.png" alt="logo" class="w-full max-w-[80px] hidden dark_logo">
+        </a>
+        <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
+            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white">
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+            </svg>
+        </button>
+        <div class="py-4 overflow-y-auto">
+            <ul class="font-medium">
+                <li class="border-b dark:border-slate-700">
+                    <a href="index.html"
+                        class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Home</a>
+                </li>
+                <li class="border-b dark:border-slate-700">
+                    <a href="gallery.html"
+                        class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Gallery</a>
+                <li class="border-b dark:border-slate-700">
+                    <a href="about.html"
+                        class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">About</a>
+                </li>
+                <li class="border-b dark:border-slate-700">
+                    <a href="#" aria-controls="dropdown-pages" data-collapse-toggle="dropdown-pages"
+                        class="flex items-center justify-between px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Pages
+                        <i class="fa-solid fa-angle-down ms-1"></i></a>
+                    <ul id="dropdown-pages" class="hidden">
+                        <li class="border-b dark:border-slate-700 pl-3">
+                            <a href="404.html"
+                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">404</a>
+                        </li>
+                        <li class="border-b dark:border-slate-700 pl-3">
+                            <a href="faqs.html"
+                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">FAQs</a>
+                        </li>
+                        <li class="border-b dark:border-slate-700 pl-3">
+                            <a href="pricing_plans.html"
+                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Pricing
+                                Plans</a>
+                        </li>
+                        <li class="border-b dark:border-slate-700 pl-3">
+                            <a href="#" aria-controls="dropdown-authentication"
+                                data-collapse-toggle="dropdown-authentication"
+                                class="flex items-center justify-between px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Authentication
+                                <i class="fa-solid fa-angle-down ms-1"></i></a>
+                            <ul id="dropdown-authentication" class="hidden">
+                                <li class="border-b dark:border-slate-700 pl-3">
+                                    <a href="login.html"
+                                        class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Login</a>
+                                </li>
+                                <li class="border-b dark:border-slate-700 pl-3">
+                                    <a href="register.html"
+                                        class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Register</a>
+                                </li>
+                                <li class="border-b dark:border-slate-700 pl-3">
+                                    <a href="forgot-password.html"
+                                        class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Forgot
+                                        Password</a>
+                                </li>
+                                <li class="border-b dark:border-slate-700 pl-3">
+                                    <a href="new-password.html"
+                                        class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">New
+                                        Password</a>
+                                </li>
+                                <li class="border-b dark:border-slate-700 pl-3">
+                                    <a href="verify-email.html"
+                                        class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Verify
+                                        Email</a>
+                                </li>
+                                <li class="pl-3">
+                                    <a href="verify-pin.html"
+                                        class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Verify
+                                        Pin</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="border-b dark:border-slate-700 pl-3">
+                            <a href="coming_soon.html"
+                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Coming
+                                Soon</a>
+                        </li>
+                        <li class="border-b dark:border-slate-700 pl-3">
+                            <a href="terms-service.html"
+                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Terms
+                                Service</a>
+                        </li>
+                        <li class="pl-3">
+                            <a href="privacy-policy.html"
+                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Privacy
+                                Policy</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" aria-controls="blog-pages" data-collapse-toggle="blog-pages"
+                        class="flex items-center justify-between px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200 border-b dark:border-slate-700">Blog<i
+                            class="fa-solid fa-angle-down ms-1"></i></a>
+                    <ul id="blog-pages" class="hidden">
+                        <li class="border-b dark:border-slate-700 pl-3">
+                            <a href="blog_grid.html"
+                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Blog
+                                Grid</a>
+                        </li>
+                        <li class="border-b dark:border-slate-700 pl-3">
+                            <a href="blog_detail.html"
+                                class="block px-4 py-2 font-sans font-semibold text-lg hover:text-red-400 transition duration-500 ease-in-out dark:text-gray-200">Blog
+                                Detail</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- ========= MOBILE MENU OFFCANVAS END ========= -->
+
+    <!-- Breadcrumb Section Start-->
+    <section
+        class="breadcrumb relative bg-[url('../../assest/img/gallery_bg_img.png')] bg-cover bg-no-repeat bg-center md:py-20 py-12 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black before:opacity-60">
+        <div class="container mx-auto text-center relative">
+            <h1 class="text-6xl text-white font-bold">Blog Detail</h1>
+            <ul class="flex items-center justify-center text-white font-semibold text-2xl mt-5">
+                <li><a href="index.html">Home<i class="fa fa-angle-right text-lg mx-2"></i></a></li>
+                <li><a href="blog_detail.html">Blog Detail</a></li>
+            </ul>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End-->
+
+    <section class="blog_section dark:bg-slate-950  md:py-20 py-16">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap">
+                <div class="w-full lg:w-2/6 p-3">
+                    <div class="bg-white dark:bg-slate-900 shadow dark:shadow-slate-600 py-7 px-4 rounded-lg mb-5">
+                        <div class="input-group w-full relative">
+                            <input type="text"
+                                class="w-full rounded focus:ring-transparent focus:outline-red-500 focus:outline-offset-0 border-gray-200 dark:border-gray-800 dark:text-white focus:border-transparent dark:bg-slate-950"
+                                placeholder="Search...">
+                            <span
+                                class="input-group-text bg-transparent absolute right-3 top-3 text-gray-500 dark:text-gray-300"><i
+                                    class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 shadow dark:shadow-slate-600 py-7 px-4 rounded-lg mb-5">
+                        <div class="category w-full relative">
+                            <h1 class="text-black dark:text-white text-2xl font-bold mb-4">Category</h1>
+                            <div class="category_details">
+                                <div class="flex justify-between mb-2">
+                                    <div class="flex items-center mr-4">
+                                        <input type="checkbox" id="graphics"
+                                            class="w-4 h-4 text-red-500 border-gray-300 rounded focus:ring-0 focus:ring-offset-0 dark:bg-slate-950 dark:border-gray-800">
+                                        <label class="ml-2 text-lg font-semibold text-gray-500 dark:text-gray-300"
+                                            for="graphics">Graphic Design</label>
+                                    </div>
+                                    <a class="font-semibold text-base text-gray-500 dark:text-gray-300"
+                                        href="javascript:void(0);">(48)</a>
+                                </div>
+                                <div class="flex justify-between mb-2">
+                                    <div class="flex items-center mr-4">
+                                        <input type="checkbox" id="webdev"
+                                            class="w-4 h-4 text-red-500 border-gray-300 rounded focus:ring-0 focus:ring-offset-0 dark:bg-slate-950 dark:border-gray-800   ">
+                                        <label class="ml-2 text-lg font-semibold text-gray-500 dark:text-gray-300"
+                                            for="webdev">Web Development</label>
+                                    </div>
+                                    <a class="font-semibold text-base text-gray-500 dark:text-gray-300"
+                                        href="javascript:void(0);">(99)</a>
+                                </div>
+                                <div class="flex justify-between mb-2">
+                                    <div class="flex items-center mr-4">
+                                        <input type="checkbox" id="webd"
+                                            class="w-4 h-4 text-red-500 border-gray-300 rounded focus:ring-0 focus:ring-offset-0 dark:bg-slate-950 dark:border-gray-800     ">
+                                        <label class="ml-2 text-lg font-semibold text-gray-500 dark:text-gray-300"
+                                            for="webd">Web Design</label>
+                                    </div>
+                                    <a class="font-semibold text-base text-gray-500 dark:text-gray-300"
+                                        href="javascript:void(0);">(99)</a>
+                                </div>
+                                <div class="flex justify-between mb-2">
+                                    <div class="flex items-center mr-4">
+                                        <input type="checkbox" id="seo"
+                                            class="w-4 h-4 text-red-500 border-gray-300 rounded focus:ring-0 focus:ring-offset-0 dark:bg-slate-950 dark:border-gray-800  ">
+                                        <label class="ml-2 text-lg font-semibold text-gray-500 dark:text-gray-300"
+                                            for="seo">SEO Marketing</label>
+                                    </div>
+                                    <a class="font-semibold text-base text-gray-500 dark:text-gray-300"
+                                        href="javascript:void(0);">(18)</a>
+                                </div>
+                                <div class="flex justify-between mb-2">
+                                    <div class="flex items-center mr-4">
+                                        <input type="checkbox" id="php"
+                                            class="w-4 h-4 text-red-500 border-gray-300 rounded focus:ring-0 focus:ring-offset-0 dark:bg-slate-950 dark:border-gray-800  ">
+                                        <label class="ml-2 text-lg font-semibold text-gray-500 dark:text-gray-300"
+                                            for="php">PHP Devlopment</label>
+                                    </div>
+                                    <a class="font-semibold text-base text-gray-500 dark:text-gray-300"
+                                        href="javascript:void(0);">(08)</a>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex items-center mr-4">
+                                        <input type="checkbox" id="wordpress"
+                                            class="w-4 h-4 text-red-500 border-gray-300 rounded focus:ring-0 focus:ring-offset-0 dark:bg-slate-950 dark:border-gray-800    ">
+                                        <label class="ml-2 text-lg font-semibold text-gray-500 dark:text-gray-300"
+                                            for="wordpress">WordPress Devlopment</label>
+                                    </div>
+                                    <a class="font-semibold text-base text-gray-500 dark:text-gray-300"
+                                        href="javascript:void(0);">(18)</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 shadow dark:shadow-slate-600 py-7 px-4 rounded-lg mb-5">
+                        <div class="category w-full relative">
+                            <h1 class="text-black dark:text-white text-2xl font-bold mb-4">Recent Posts</h1>
+                            <div class="flex mb-3">
+                                <div class="img_content w-full max-w-[120px] ">
+                                    <img src="./assest/img/blog_img1.png" alt="blog img"
+                                        class="w-full h-full max-w-[120px] rounded-md object-cover">
+                                </div>
+                                <div class="contact_detail ms-3">
+                                    <h1
+                                        class="text-base leading-5 w-full max-w-[250px] text-black dark:text-white font-semibold">
+                                        Learn Webs Applications Development from Experts</h1>
+                                    <p class="text-gray-500 dark:text-gray-400 text-lg font-semibold">April 1, 2022</p>
+                                </div>
+                            </div>
+                            <div class="flex mb-3">
+                                <div class="img_content w-full max-w-[120px] ">
+                                    <img src="./assest/img/blog_img2.png" alt="blog img"
+                                        class="w-full h-full max-w-[120px] rounded-md object-cover">
+                                </div>
+                                <div class="contact_detail ms-3">
+                                    <h1
+                                        class="text-base leading-5 w-full max-w-[250px] text-black dark:text-white font-semibold">
+                                        Learn Webs Applications Development from Experts</h1>
+                                    <p class="text-gray-500 dark:text-gray-400 text-lg font-semibold">April 1, 2022</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="img_content w-full max-w-[120px] ">
+                                    <img src="./assest/img/blog_img3.png" alt="blog img"
+                                        class="w-full h-full max-w-[120px] rounded-md object-cover">
+                                </div>
+                                <div class="contact_detail ms-3">
+                                    <h1
+                                        class="text-base leading-5 w-full max-w-[250px] text-black dark:text-white font-semibold">
+                                        Learn Webs Applications Development from Experts</h1>
+                                    <p class="text-gray-500 dark:text-gray-400 text-lg font-semibold">April 1, 2022</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 shadow dark:shadow-slate-600 py-7 px-4 rounded-lg mb-5">
+                        <div class="category w-full relative">
+                            <h1 class="text-black dark:text-white text-2xl font-bold mb-4">Our Archives</h1>
+                            <div class="category_details">
+                                <div class="flex justify-between mb-2">
+                                    <div class="flex items-center mr-4">
+                                        <input type="checkbox" id="May"
+                                            class="w-4 h-4 text-red-500 border-gray-300 rounded focus:ring-0 focus:ring-offset-0 dark:bg-slate-950 dark:border-gray-800">
+                                        <label class="ml-2 text-lg font-semibold text-gray-500 dark:text-gray-300"
+                                            for="May">May</label>
+                                    </div>
+                                    <a class="font-semibold text-base text-gray-500 dark:text-gray-300"
+                                        href="javascript:void(0);">2022</a>
+                                </div>
+                                <div class="flex justify-between mb-2">
+                                    <div class="flex items-center mr-4">
+                                        <input type="checkbox" id="Jun"
+                                            class="w-4 h-4 text-red-500 border-gray-300 rounded focus:ring-0 focus:ring-offset-0 dark:bg-slate-950 dark:border-gray-800   ">
+                                        <label class="ml-2 text-lg font-semibold text-gray-500 dark:text-gray-300"
+                                            for="Jun">Jun</label>
+                                    </div>
+                                    <a class="font-semibold text-base text-gray-500 dark:text-gray-300"
+                                        href="javascript:void(0);">2022</a>
+                                </div>
+                                <div class="flex justify-between mb-2">
+                                    <div class="flex items-center mr-4">
+                                        <input type="checkbox" id="July"
+                                            class="w-4 h-4 text-red-500 border-gray-300 rounded focus:ring-0 focus:ring-offset-0 dark:bg-slate-950 dark:border-gray-800     ">
+                                        <label class="ml-2 text-lg font-semibold text-gray-500 dark:text-gray-300"
+                                            for="July">July</label>
+                                    </div>
+                                    <a class="font-semibold text-base text-gray-500 dark:text-gray-300"
+                                        href="javascript:void(0);">2022</a>
+                                </div>
+                                <div class="flex justify-between mb-2">
+                                    <div class="flex items-center mr-4">
+                                        <input type="checkbox" id="August"
+                                            class="w-4 h-4 text-red-500 border-gray-300 rounded focus:ring-0 focus:ring-offset-0 dark:bg-slate-950 dark:border-gray-800  ">
+                                        <label class="ml-2 text-lg font-semibold text-gray-500 dark:text-gray-300"
+                                            for="August">August</label>
+                                    </div>
+                                    <a class="font-semibold text-base text-gray-500 dark:text-gray-300"
+                                        href="javascript:void(0);">2022</a>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex items-center mr-4">
+                                        <input type="checkbox" id="September"
+                                            class="w-4 h-4 text-red-500 border-gray-300 rounded focus:ring-0 focus:ring-offset-0 dark:bg-slate-950 dark:border-gray-800  ">
+                                        <label class="ml-2 text-lg font-semibold text-gray-500 dark:text-gray-300"
+                                            for="September">September</label>
+                                    </div>
+                                    <a class="font-semibold text-base text-gray-500 dark:text-gray-300"
+                                        href="javascript:void(0);">2022</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 shadow dark:shadow-slate-600 py-7 px-4 rounded-lg mb-5">
+                        <h1 class="text-black dark:text-white text-2xl font-bold mb-4">Gallery post</h1>
+                        <div class="flex flex-wrap w-full">
+                            <div class="xsm:w-1/3 w-1/2 p-2">
+                                <a href="./assest/img/gallery_post/gallery_img1.png" data-fancybox="gallery"
+                                    class="w-full max-w-full">
+                                    <img src="./assest/img/gallery_post/gallery_img1.png" alt="img" class="rounded-md">
+                                </a>
+                            </div>
+                            <div class="xsm:w-1/3 w-1/2 p-2">
+                                <a href="./assest/img/gallery_post/gallery_img2.png" data-fancybox="gallery">
+                                    <img src="./assest/img/gallery_post/gallery_img2.png" alt="img" class="rounded-md">
+                                </a>
+                            </div>
+                            <div class="xsm:w-1/3 w-1/2 p-2">
+                                <a href="./assest/img/gallery_post/gallery_img3.png" data-fancybox="gallery">
+                                    <img src="./assest/img/gallery_post/gallery_img3.png" alt="img" class="rounded-md">
+                                </a>
+                            </div>
+                            <div class="xsm:w-1/3 w-1/2 p-2">
+                                <a href="./assest/img/gallery_post/gallery_img4.png" data-fancybox="gallery">
+                                    <img src="./assest/img/gallery_post/gallery_img4.png" alt="img" class="rounded-md">
+                                </a>
+                            </div>
+                            <div class="xsm:w-1/3 w-1/2 p-2">
+                                <a href="./assest/img/gallery_post/gallery_img5.png" data-fancybox="gallery">
+                                    <img src="./assest/img/gallery_post/gallery_img5.png" alt="img" class="rounded-md">
+                                </a>
+                            </div>
+                            <div class="xsm:w-1/3 w-1/2 p-2">
+                                <a href="./assest/img/gallery_post/gallery_img6.png" data-fancybox="gallery">
+                                    <img src="./assest/img/gallery_post/gallery_img6.png" alt="img" class="rounded-md">
+                                </a>
+                            </div>
+                            <div class="xsm:w-1/3 w-1/2 p-2">
+                                <a href="./assest/img/gallery_post/gallery_img7.png" data-fancybox="gallery">
+                                    <img src="./assest/img/gallery_post/gallery_img7.png" alt="img" class="rounded-md">
+                                </a>
+                            </div>
+                            <div class="xsm:w-1/3 w-1/2 p-2">
+                                <a href="./assest/img/gallery_post/gallery_img8.png" data-fancybox="gallery">
+                                    <img src="./assest/img/gallery_post/gallery_img8.png" alt="img" class="rounded-md">
+                                </a>
+                            </div>
+                            <div class="xsm:w-1/3 w-1/2 p-2">
+                                <a href="./assest/img/gallery_post/gallery_img9.png" data-fancybox="gallery">
+                                    <img src="./assest/img/gallery_post/gallery_img9.png" alt="img" class="rounded-md">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-2/3 p-3">
+                    <div class="bg-white dark:bg-slate-900 shadow dark:shadow-slate-600 p-6 rounded-lg mb-5">
+                        <div class="img_content">
+                            <img src="./assest/img/blog-img4.png" alt="img" class="rounded-md">
+                        </div>
+                        <div class="card_body">
+                            <div class="post_meta flex items-center flex-wrap my-4 pb-2 ">
+                                <a href="javascript:void(0)" class="flex text-lg items-center">
+                                    <i class="fa-solid fa-user text-red-400"></i>
+                                    <span
+                                        class="text-gray-500 dark:text-gray-400 font-semibold  hover:text-red-400 ms-3">webki</span>
+                                </a>
+                                <a href="javascript:void(0)" class="flex text-lg items-center ms-6">
+                                    <i class="fa-regular fa-calendar-days text-red-400"></i>
+                                    <span
+                                        class="text-gray-500 dark:text-gray-400 font-semibold  hover:text-red-400 ms-3">
+                                        24 Acto, 2022
+                                    </span>
+                                </a>
+                                <a href="javascript:void(0)" class="flex text-lg items-center ms-6">
+                                    <i class="fa-sharp fa-solid fa-tags text-red-400"></i>
+                                    <span
+                                        class="text-gray-500 dark:text-gray-400 font-semibold  hover:text-red-400 ms-3">PROGRAMMING,
+                                        WEB DESIGN </span>
+                                </a>
+                            </div>
+                            <a href="javascript:void(0)"
+                                class="text-black dark:text-white hover:text-red-400 dark:hover:text-red-400 font-bold text-3xl leading-7 transition-all duration-500 ease-in-out border-b dark:border-slate-700 pb-3 block">Learn
+                                Webs Applications Development from Experts</a>
+                            <p class="font-medium text-xl text-gray-500 dark:text-gray-300 py-4">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit.
+                                Pellentesque aliquet
+                                nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium,
+                                ligula sollicitudin
+                                laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam
+                                mollis. Ut justo.
+                                Suspendisse potenti.
+                            </p>
+                            <p class="font-medium text-xl text-gray-500 dark:text-gray-300 pb-3">
+                                Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero
+                                eu augue.
+                                Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus.
+                                Praesent elementum
+                                hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices
+                                sagittis, mi neque
+                                euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu,
+                                fermentum et,
+                                dapibus sed, urna.
+                            </p>
+                            <button type="button"
+                                class="w-32 h-12 rounded-3xl bg-red-500 text-white text-lg font-semibold mt-4">Read
+                                More</button>
+
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 shadow dark:shadow-slate-600 p-6 rounded-lg mb-5">
+                        <h1 class="text-black dark:text-white text-2xl font-bold mb-4">Our Archives</h1>
+                        <div class="blockqoute bg-red-50 border-l-4 border-red-500 rounded-md p-6">
+                            <p class="font-semibold text-xl text-gray-500 mb-3">
+                                Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper
+                                laoreet, lectus arcu
+                                pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus.
+                            </p>
+                            <p
+                                class="relative font-medium text-lg before:absolute before:border-black before:bg-black before:w-10 before:rounded-2xl before:top-3 before:-left-0 before:h-full before:max-h-[2px] pl-12">
+                                Adam Smith</p>
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 shadow dark:shadow-slate-600 p-6 rounded-lg mb-5">
+                        <h1 class="text-black dark:text-white text-2xl font-bold mb-4">Comments (20)</h1>
+                        <div class="py-4 border-b dark:border-slate-700">
+                            <div class="flex flex-wrap">
+                                <div class="w-1/5 p-2">
+                                    <img src="./assest/img/team_member1.png" alt="img" class="rounded-md">
+                                </div>
+                                <div class="w-4/5 p-2">
+                                    <div class="contact_detail w-4/5 p-2">
+                                        <h1 class="text-xl font-bold text-black dark:text-white">Raymond Gill</h1>
+                                        <div class="post_meta flex justify-between items-center my-2">
+                                            <a href="javascript:;" class="flex items-center">
+                                                <i class="fa-regular fa-clock text-gray-500 dark:text-gray-300"></i>
+                                                <span
+                                                    class="text-gray-500 dark:text-gray-300 font-semibold text-lg ms-2">
+                                                    Aug 29, 2022 </span>
+                                            </a>
+                                            <a href="javascript:;" class="flex items-center ">
+                                                <p class="me-1">
+                                                    <i
+                                                        class="fa-regular fa-thumbs-up text-gray-500 dark:text-gray-300"></i>
+                                                    <span
+                                                        class="text-gray-500 dark:text-gray-300 font-semibold text-base ms-1">120</span>
+                                                </p>
+                                                <p class="ms-1">
+                                                    <i
+                                                        class="fa-regular fa-thumbs-down fa-flip-horizontal text-gray-500 dark:text-gray-300"></i>
+                                                    <span
+                                                        class="text-gray-500 dark:text-gray-300 font-semibold text-base ms-1">63</span>
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <p class="text-gray-500 dark:text-gray-300 text-lg font-semibold">There are many
+                                            variations of passages the majority have suffered in some injected humour or
+                                            randomised words which don't look even slightly believable.</p>
+                                        <button type="button"
+                                            class="py-2 w-28  mt-5 font-medium rounded-md border border-red-500 hover:bg-red-500 hover:text-white transition duration-700 ease-in-out text-base text-red-500 leading-none">
+                                            <i class="fa-solid fa-reply"></i>
+                                            Reply
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-4 border-b dark:border-slate-700">
+                            <div class="flex flex-wrap ps-12">
+                                <div class="w-1/5 p-2">
+                                    <img src="./assest/img/team_member2.png" alt="img" class="rounded-md">
+                                </div>
+                                <div class="w-4/5 p-2">
+                                    <div class="contact_detail w-4/5 p-2">
+                                        <h1 class="text-xl font-bold text-black dark:text-white">Miranda Doe</h1>
+                                        <div class="post_meta flex justify-between items-center my-2">
+                                            <a href="javascript:;" class="flex items-center">
+                                                <i class="fa-regular fa-clock text-gray-500 dark:text-gray-300"></i>
+                                                <span
+                                                    class="text-gray-500 dark:text-gray-300 font-semibold text-lg ms-2">
+                                                    Aug 5
+                                                    , 2022 </span>
+                                            </a>
+                                            <a href="javascript:;" class="flex items-center ">
+                                                <p class="me-1">
+                                                    <i
+                                                        class="fa-regular fa-thumbs-up text-gray-500 dark:text-gray-300"></i>
+                                                    <span
+                                                        class="text-gray-500 dark:text-gray-300 font-semibold text-base ms-1">120</span>
+                                                </p>
+                                                <p class="ms-1">
+                                                    <i
+                                                        class="fa-regular fa-thumbs-down fa-flip-horizontal text-gray-500 dark:text-gray-300"></i>
+                                                    <span
+                                                        class="text-gray-500 dark:text-gray-300 font-semibold text-base ms-1">63</span>
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <p class="text-gray-500 dark:text-gray-300 text-lg font-semibold">There are many
+                                            variations of passages the majority have suffered in some injected humour or
+                                            randomised words which don't look even slightly believable.</p>
+                                        <button type="button"
+                                            class="py-2 w-28  mt-5 font-medium rounded-md border border-red-500 hover:bg-red-500 hover:text-white transition duration-700 ease-in-out text-base text-red-500 leading-none">
+                                            <i class="fa-solid fa-reply"></i>
+                                            Reply
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-4 border-b dark:border-slate-700">
+                            <div class="flex flex-wrap">
+                                <div class="w-1/5 p-2">
+                                    <img src="./assest/img/team_member3.png" alt="img" class="rounded-md">
+                                </div>
+                                <div class="w-4/5 p-2">
+                                    <div class="contact_detail w-4/5 p-2">
+                                        <h1 class="text-xl font-bold text-black dark:text-white">Cosmo Kito</h1>
+                                        <div class="post_meta flex justify-between items-center my-2">
+                                            <a href="javascript:;" class="flex items-center">
+                                                <i class="fa-regular fa-clock text-gray-500 dark:text-gray-300"></i>
+                                                <span
+                                                    class="text-gray-500 dark:text-gray-300 font-semibold text-lg ms-2">
+                                                    Sept 16, 2022 </span>
+                                            </a>
+                                            <a href="javascript:;" class="flex items-center ">
+                                                <p class="me-1">
+                                                    <i
+                                                        class="fa-regular fa-thumbs-up text-gray-500 dark:text-gray-300"></i>
+                                                    <span
+                                                        class="text-gray-500 dark:text-gray-300 font-semibold text-base ms-1">120</span>
+                                                </p>
+                                                <p class="ms-1">
+                                                    <i
+                                                        class="fa-regular fa-thumbs-down fa-flip-horizontal text-gray-500 dark:text-gray-300"></i>
+                                                    <span
+                                                        class="text-gray-500 dark:text-gray-300 font-semibold text-base ms-1">63</span>
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <p class="text-gray-500 dark:text-gray-300 text-lg font-semibold">There are many
+                                            variations of passages the majority have suffered in some injected humour or
+                                            randomised words which don't look even slightly believable.</p>
+                                        <button type="button"
+                                            class="py-2 w-28  mt-5 font-medium rounded-md border border-red-500 hover:bg-red-500 hover:text-white transition duration-700 ease-in-out text-base text-red-500 leading-none">
+                                            <i class="fa-solid fa-reply"></i>
+                                            Reply
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 shadow dark:shadow-slate-600 p-6 rounded-lg mb-5">
+                        <h1 class="text-black dark:text-white text-2xl font-bold mb-4">Leave A Comment</h1>
+                        <form action="#">
+                            <div class="form-group flex sm:flex-nowrap flex-wrap">
+                                <div class="form_group_inner w-full m-2">
+                                    <label
+                                        class="block text-lg text-black font-semibold mb-1 dark:text-white">Name</label>
+                                    <input
+                                        class="form-control w-full border-gray-100 text-lg font-medium rounded-md  focus:cursor-pointer focus:border-red-500 focus:ring-transparent dark:bg-slate-950 dark:border-gray-700 dark:focus:border-red-500 dark:text-white"
+                                        type="text" name="text" placeholder="Enter Your Name" required="">
+                                </div>
+                                <div class="form_group_inner w-full m-2">
+                                    <label
+                                        class="block text-lg text-black font-semibold mb-1 dark:text-white">Email</label>
+                                    <input
+                                        class="form-control w-full border-gray-100 text-lg font-medium rounded-md  focus:cursor-pointer focus:border-red-500 focus:ring-transparent dark:bg-slate-950 dark:border-gray-700 dark:focus:border-red-500 dark:text-white"
+                                        type="email" name="email" placeholder="Enter Your Email Id" required="">
+                                </div>
+                            </div>
+                            <div class="form-group m-2">
+                                <label class="block text-lg text-black font-semibold mb-1 dark:text-white"
+                                    for="file_input">Website</label>
+                                <input
+                                    class="form-control w-full border-gray-100 text-lg font-medium rounded-md focus:cursor-pointer focus:border-red-500 focus:ring-transparent dark:bg-slate-950 dark:border-gray-700 dark:focus:border-red-500 dark:text-white"
+                                    type="text" name="text" required="">
+                            </div>
+                            <div class="form-group m-2">
+                                <label class="block text-lg text-black font-semibold mb-1 dark:text-white">Your
+                                    Comment</label>
+                                <textarea
+                                    class="form-control w-full border-gray-100 text-lg font-medium rounded-md focus:cursor-pointer focus:border-red-500 focus:ring-transparent dark:bg-slate-950 dark:border-gray-700 dark:focus:border-red-500 dark:text-white"
+                                    rows="4"></textarea>
+                            </div>
+                            <button type="button"
+                                class="w-44 h-12 rounded-3xl bg-red-500 text-white text-lg font-medium mt-5">
+                                Post Comment
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Start -->
+    <footer class="bg_brown md:py-20 py-16 border-b border-white">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap">
+                <div class="sm:w-1/2 lg:w-1/3 w-full p-3">
+                    <a href="index.html">
+                        <img src="./assest/img/dark_logo.png" alt="logo" class=" max-w-[150px] w-full">
+                    </a>
+                    <p class="text-xl text-white font-semibold mt-10 mb-4 sm:max-w-[335px] w-full">Get unlimited access
+                        to 17,000+ of webki’s top courses for your team. Learn and improve skills across business, tech,
+                        design, and more.</p>
+                    <a href="javascript:void(0)" class="w-full h-auto flex items-center py-2 footer_link">
+                        <span
+                            class="footer_span bg-red-500 text-white max-w-[35px] max-h-[35px] min-h-[35px] w-full h-full rounded-lg transition duration-700 ease-in-out flex items-center justify-center">
+                            <i class="fa-solid fa-location-dot text-sm font-bold"></i>
+                        </span>
+                        <span class="text-white font-semibold text-xl ms-4">29/C Mizza Road, Ukraine</span>
+                    </a>
+                    <a href="javascript:void(0)" class="w-full h-auto flex items-center py-2 footer_link">
+                        <span
+                            class="footer_span bg-red-500 text-white max-w-[35px] max-h-[35px] min-h-[35px] w-full h-full rounded-lg transition duration-700 ease-in-out flex items-center justify-center">
+                            <i class="fa-solid fa-phone text-sm font-bold"></i>
+                        </span>
+                        <span class="text-white font-semibold text-xl ms-4">+380 123 65X XXXX</span>
+                    </a>
+                    <a href="javascript:void(0)" class="w-full h-auto flex items-center py-2 footer_link">
+                        <span
+                            class="footer_span bg-red-500 text-white max-w-[35px] max-h-[35px] min-h-[35px] w-full h-full rounded-lg transition duration-700 ease-in-out flex items-center justify-center">
+                            <i class="fa-solid fa-envelope text-sm font-bold"></i>
+                        </span>
+                        <span class="text-white font-semibold text-xl ms-4">info@example.com</span>
+                    </a>
+                </div>
+                <div class="sm:w-1/2 lg:w-1/6 w-full p-3">
+                    <h4 class="footer_header relative text-white font-semibold text-2xl font-Rajdhani mb-10">
+                        Quick Links
+                    </h4>
+                    <ul class="fmenu_list">
+                        <li
+                            class="fmenu_items pb-3 hover:transform hover:translate-x-3 transition duration-500 ease-in-out">
+                            <a href="javascript:void(0)" class="text-white font-bold text-lg"><i
+                                    class="fa-solid fa-angle-right text-red-500 text-lg me-2"></i> About Us</a>
+                        </li>
+                        <li
+                            class="fmenu_items pb-3 hover:transform hover:translate-x-3 transition duration-500 ease-in-out">
+                            <a href="javascript:void(0)" class="text-white font-bold text-lg"><i
+                                    class="fa-solid fa-angle-right text-red-500 text-lg me-2"></i> Our Team</a>
+                        </li>
+                        <li
+                            class="fmenu_items pb-3 hover:transform hover:translate-x-3 transition duration-500 ease-in-out">
+                            <a href="javascript:void(0)" class="text-white font-bold text-lg"><i
+                                    class="fa-solid fa-angle-right text-red-500 text-lg me-2"></i> Terms Of Service</a>
+                        </li>
+                        <li
+                            class="fmenu_items pb-3 hover:transform hover:translate-x-3 transition duration-500 ease-in-out">
+                            <a href="javascript:void(0)" class="text-white font-bold text-lg"><i
+                                    class="fa-solid fa-angle-right text-red-500 text-lg me-2"></i> Privacy policy</a>
+                        </li>
+                        <li
+                            class="fmenu_items pb-3 hover:transform hover:translate-x-3 transition duration-500 ease-in-out">
+                            <a href="javascript:void(0)" class="text-white font-bold text-lg"><i
+                                    class="fa-solid fa-angle-right text-red-500 text-lg me-2"></i> Our Services</a>
+                        </li>
+                        <li
+                            class="fmenu_items  hover:transform hover:translate-x-3 transition duration-500 ease-in-out">
+                            <a href="javascript:void(0)" class="text-white font-bold text-lg"><i
+                                    class="fa-solid fa-angle-right text-red-500 text-lg me-2"></i> Latest Blog</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sm:w-1/2 lg:w-1/6 w-full p-3">
+                    <h4 class="footer_header relative text-white font-semibold text-2xl font-Rajdhani mb-10">
+                        Support
+                    </h4>
+                    <ul class="fmenu_list">
+                        <li
+                            class="fmenu_items pb-3 hover:transform hover:translate-x-3 transition duration-500 ease-in-out">
+                            <a href="javascript:void(0)" class="text-white font-bold text-lg"><i
+                                    class="fa-solid fa-angle-right text-red-500 text-lg me-2"></i>Online Support</a>
+                        </li>
+                        <li
+                            class="fmenu_items pb-3 hover:transform hover:translate-x-3 transition duration-500 ease-in-out">
+                            <a href="javascript:void(0)" class="text-white font-bold text-lg"><i
+                                    class="fa-solid fa-angle-right text-red-500 text-lg me-2"></i> FAQs</a>
+                        </li>
+                        <li
+                            class="fmenu_items pb-3 hover:transform hover:translate-x-3 transition duration-500 ease-in-out">
+                            <a href="javascript:void(0)" class="text-white font-bold text-lg"><i
+                                    class="fa-solid fa-angle-right text-red-500 text-lg me-2"></i>
+                                Feedback</a>
+                        </li>
+                        <li
+                            class="fmenu_items pb-3 hover:transform hover:translate-x-3 transition duration-500 ease-in-out">
+                            <a href="javascript:void(0)" class="text-white font-bold text-lg"><i
+                                    class="fa-solid fa-angle-right text-red-500 text-lg me-2"></i>24/7 Service</a>
+                        </li>
+                        <li
+                            class="fmenu_items pb-3 hover:transform hover:translate-x-3 transition duration-500 ease-in-out">
+                            <a href="javascript:void(0)" class="text-white font-bold text-lg"><i
+                                    class="fa-solid fa-angle-right text-red-500 text-lg me-2"></i> Make Call</a>
+                        </li>
+                        <li
+                            class="fmenu_items  hover:transform hover:translate-x-3 transition duration-500 ease-in-out">
+                            <a href="javascript:void(0)" class="text-white font-bold text-lg"><i
+                                    class="fa-solid fa-angle-right text-red-500 text-lg me-2"></i> Latest Blog</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sm:w-1/2 lg:w-1/3 w-full p-3">
+                    <h4 class="footer_header relative text-white font-semibold text-2xl font-Rajdhani mb-10">
+                        Newsletter
+                    </h4>
+                    <p class="text-xl text-white font-semibold mt-10 mb-4">Subscribe Our Newsletter To Get First Latest
+                        Update And News</p>
+                    <form action="#" class="relative mb-4">
+                        <input type="email"
+                            class="w-full py-3 px-6 text-lg rounded-full outline-none bg-transparent border border-red-500 focus:shadow-none focus:border-red-500 leading-normal text-white"
+                            placeholder="Your email address" required>
+                        <button type="submit"
+                            class="absolute top-0 right-0 h-full rounded-e-full px-6 bg-red-500 text-white text-lg font-bold">
+                            <i class="fa fa-paper-plane"></i> Subscribe</button>
+                    </form>
+                    <p class="text-white font-bold text-lg">Follow Us :</p>
+                    <div class="w-full max-w-[200px] h-auto flex items-center justify-between py-5">
+                        <span
+                            class="bg-red-500 text-white hover:bg-white hover:text-red-500 max-w-[38px] max-h-[38px] min-h-[38px] w-full h-full rounded-full transition duration-700 ease-in-out flex items-center justify-center">
+                            <i class="fa-brands fa-facebook-f text-sm font-bold"></i>
+                        </span>
+                        <span
+                            class="bg-red-500 text-white hover:bg-white hover:text-red-500 max-w-[38px] max-h-[38px] min-h-[38px] w-full h-full rounded-full transition duration-700 ease-in-out flex items-center justify-center">
+                            <i class="fa-brands fa-instagram text-sm font-bold"></i>
+                        </span>
+                        <span
+                            class="bg-red-500 text-white hover:bg-white hover:text-red-500 max-w-[38px] max-h-[38px] min-h-[38px] w-full h-full rounded-full transition duration-700 ease-in-out flex items-center justify-center">
+                            <i class="fa-brands fa-twitter text-sm font-bold"></i>
+                        </span>
+                        <span
+                            class="bg-red-500 text-white hover:bg-white hover:text-red-500 max-w-[38px] max-h-[38px] min-h-[38px] w-full h-full rounded-full transition duration-700 ease-in-out flex items-center justify-center">
+                            <i class="fa-brands fa-youtube text-sm font-bold"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="subfooter bg_brown">
+        <div class="container mx-auto">
+            <div class="md:flex items-center flex-wrap mx-auto py-2">
+                <div class="lg:w-1/2 w-full flex justify-center lg:justify-start">
+                    <p class="text-white font-bold text-lg">© Copyright <a href="javascript:void(0)"
+                            class="text-red-500">webki</a> All Rights Reserved.</p>
+                </div>
+                <div class="lg:w-1/2 w-full flex justify-center lg:justify-end items-center">
+                    <a href="javscript:void(0);" class="text-white font-semibold hover:text-red-500 text-lg py-2 px-4">
+                        Support </a>
+                    <a href="javscript:void(0);"
+                        class="text-white font-semibold hover:text-red-500 text-lg py-2 px-4">Terms Of Services </a>
+                    <a href="javscript:void(0);"
+                        class="text-white font-semibold hover:text-red-500 text-lg py-2 px-4">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <!-- dark mode toggle -->
+    <button id="theme-toggle" type="button"
+        class="bg-slate-900 dark:bg-slate-100 dark:text-gray-600 text-gray-400  rounded-tl-xl rounded-bl-xl text-sm py-3 px-4 fixed top-[50%] right-0 z-40">
+        <i class="fa-solid fa-moon text-xl hidden" id="theme-toggle-dark-icon"></i>
+        <i class="fa-solid fa-sun text-xl hidden" id="theme-toggle-light-icon"></i>
+    </button>
+    <!-- Jquery js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Flowbite js -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <!-- Fancybox js -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <!-- Costum js -->
+    <script src="./assest/js/main.js"></script>
+    <script>
+        Fancybox.bind("[data-fancybox]", {
+            // Your custom options
+        });
+    </script>
+</body>
+
+</html>
